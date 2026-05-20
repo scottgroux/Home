@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Your Name</div>
+      <div class="tagline">Writing &amp; thoughts</div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="nav-link active">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link">Poetry</a>
+        </div>
+      </div>
+
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">© 2025 Your Name</div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="home-hero">
+      <div class="eyebrow">Currently</div>
+      <h1>What I've<br>been up to</h1>
+      <p>A running log of places visited, things I've been thinking about, and whatever feels worth writing down. Updated when something earns it.</p>
+    </section>
+
+    <!-- Body -->
+    <div class="home-body">
+
+      <!-- Recent photos -->
+      <div class="section-label">Recent photos</div>
+      <div class="photo-grid">
+
+        <div class="photo-slot">
+          <!-- Replace src with your image path, e.g. assets/photos/korea-1.jpg -->
+          <!-- <img src="assets/photos/your-photo.jpg" alt="Brief description" /> -->
+          <div class="placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            Add a photo
+          </div>
+          <div class="photo-caption">Caption goes here</div>
+        </div>
+
+        <div class="photo-slot">
+          <div class="placeholder">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            Add a photo
+          </div>
+          <div class="photo-caption">Caption goes here</div>
+        </div>
+
+      </div>
+
+      <!-- Latest update -->
+      <div class="update-block">
+        <div class="section-label">Latest update</div>
+        <span class="update-date">May 2025</span>
+        <p>
+          This is where you write a paragraph or two about what's been going on lately.
+          A trip, a project, a season of life — whatever feels worth capturing. Keep it
+          honest and personal. You can update this whenever you like, or turn it into a
+          dated log of short entries over time.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function toggleWriting() {
+      const toggle = document.getElementById('writing-toggle');
+      const sub    = document.getElementById('writing-sub');
+      toggle.classList.toggle('open');
+      sub.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
