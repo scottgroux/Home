@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editorials — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Your Name</div>
+      <div class="tagline">Writing &amp; thoughts</div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link active">Editorials</a>
+          <a href="poetry.html" class="nav-link">Poetry</a>
+        </div>
+      </div>
+
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">© 2025 Your Name</div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <section class="writing-hero">
+      <div class="tag">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        Personal Writing
+      </div>
+      <h1>Editorials</h1>
+      <p>Longer-form thinking on things that matter to me — culture, place, time, and whatever I can't stop turning over in my head.</p>
+    </section>
+
+    <div class="writing-list">
+
+      <!-- ── Post entries — duplicate this block for each piece ── -->
+
+      <article class="post-item">
+        <div class="post-date">May<br>2025</div>
+        <div>
+          <div class="post-title">Your first editorial title goes here</div>
+          <div class="post-excerpt">A sentence or two that gives the reader a taste of what this piece is about. Keep it intriguing, not exhaustive.</div>
+          <span class="post-tag">Essay</span>
+        </div>
+      </article>
+
+      <article class="post-item">
+        <div class="post-date">Apr<br>2025</div>
+        <div>
+          <div class="post-title">Another piece title</div>
+          <div class="post-excerpt">A brief description of this editorial. Draw the reader in with a fragment of the argument or a striking image from the writing.</div>
+          <span class="post-tag">Opinion</span>
+        </div>
+      </article>
+
+      <article class="post-item">
+        <div class="post-date">Feb<br>2025</div>
+        <div>
+          <div class="post-title">A third entry to get started</div>
+          <div class="post-excerpt">Add as many entries as you like by duplicating the article block above. Newest at the top, oldest at the bottom.</div>
+          <span class="post-tag">Essay</span>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      const toggle = document.getElementById('writing-toggle');
+      const sub    = document.getElementById('writing-sub');
+      toggle.classList.toggle('open');
+      sub.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
