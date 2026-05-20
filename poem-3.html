@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poem Title — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Writing &amp; thoughts</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link active">Poetry</a>
+        </div>
+      </div>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2025 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="poetry.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Poetry
+      </a>
+      <div class="post-meta">Month Year · Form (e.g. Free verse)</div>
+      <h1>Poem 3 title goes here</h1>
+    </div>
+
+    <div class="poem-body">
+      <!-- Each <div class="stanza"> is one stanza. Line breaks inside are preserved. -->
+      <!-- Add or remove stanza blocks as needed. -->
+
+      <div class="stanza">First line of the first stanza.
+Second line follows naturally here.
+The third line closes the thought,
+and the fourth lets it breathe.</div>
+
+      <div class="stanza">A new stanza begins after the gap.
+White space between stanzas is automatic.
+Just add another stanza div
+when the poem needs a pause.</div>
+
+      <div class="stanza">Replace all of this with your actual poem.
+Update the title in the h1 above,
+the date and form in post-meta,
+and the page title in the head.</div>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>
