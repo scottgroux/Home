@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Your Name</div>
+      <div class="tagline">Writing &amp; thoughts</div>
+    </div>
+
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link">Poetry</a>
+        </div>
+      </div>
+
+      <a href="resume.html" class="nav-link active">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">© 2025 Your Name</div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <section class="resume-hero">
+      <h1>Resume</h1>
+      <p>A summary of my background, experience, and work. Download a copy below or read through here.</p>
+      <!-- Update href to point to your actual PDF once uploaded -->
+      <a class="resume-download" href="assets/resume.pdf" download>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </section>
+
+    <div class="resume-body">
+
+      <!-- Experience -->
+      <div class="resume-section">
+        <div class="resume-section-title">Experience</div>
+
+        <div class="resume-entry">
+          <div class="resume-entry-header">
+            <span class="resume-entry-title">Job Title</span>
+            <span class="resume-entry-date">2023 – Present</span>
+          </div>
+          <div class="resume-entry-sub">Company Name · City</div>
+          <p>A brief description of your role and what you accomplished. Keep it to two or three sentences — specific outcomes are more memorable than general duties.</p>
+        </div>
+
+        <div class="resume-entry">
+          <div class="resume-entry-header">
+            <span class="resume-entry-title">Previous Job Title</span>
+            <span class="resume-entry-date">2020 – 2023</span>
+          </div>
+          <div class="resume-entry-sub">Previous Company · City</div>
+          <p>Description of your responsibilities and impact. Replace placeholder text with real content from your resume.</p>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="resume-section">
+        <div class="resume-section-title">Education</div>
+
+        <div class="resume-entry">
+          <div class="resume-entry-header">
+            <span class="resume-entry-title">Degree, Field of Study</span>
+            <span class="resume-entry-date">2016 – 2020</span>
+          </div>
+          <div class="resume-entry-sub">University Name</div>
+          <p>Any notable details — thesis, honors, relevant coursework — or leave blank if you prefer to keep it simple.</p>
+        </div>
+
+      </div>
+
+      <!-- Skills -->
+      <div class="resume-section">
+        <div class="resume-section-title">Skills &amp; interests</div>
+
+        <div class="resume-entry">
+          <p>List your skills, tools, or areas of expertise here. You can keep this as a paragraph, or restructure it into categories (e.g. Languages, Tools, Languages spoken) by duplicating the resume-entry block with a sub-label.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    function toggleWriting() {
+      const toggle = document.getElementById('writing-toggle');
+      const sub    = document.getElementById('writing-sub');
+      toggle.classList.toggle('open');
+      sub.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
