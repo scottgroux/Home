@@ -7,7 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+ 
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+ 
   <!-- ── Sidebar ── -->
   <aside class="sidebar">
     <div class="sidebar-brand">
@@ -93,12 +98,25 @@
     </div>
   </main>
 
-  <script>
+ <script>
     function toggleWriting() {
       const toggle = document.getElementById('writing-toggle');
       const sub    = document.getElementById('writing-sub');
       toggle.classList.toggle('open');
       sub.classList.toggle('open');
+    }
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const btn     = document.getElementById('menu-btn');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('open');
+      btn.classList.toggle('open');
+      overlay.classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
     }
   </script>
 
