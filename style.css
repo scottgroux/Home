@@ -603,7 +603,10 @@ nav { flex: 1; }
  
   .home-hero, .home-body, .writing-hero,
   .writing-list, .resume-hero, .resume-body,
-  .post-hero, .post-body { padding-left: 22px; padding-right: 22px; }
+  .post-hero, .post-body { padding-left: 20px; padding-right: 20px; }
+
+  .poem-body { padding-left: 16px; padding-right: 16px; overflow-x: auto; }
+  .poem-body .stanza { white-space: pre; }
  
   .home-hero h1 { font-size: 2.2rem; }
   .photo-grid { grid-template-columns: 1fr; }
