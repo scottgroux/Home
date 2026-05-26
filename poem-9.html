@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right? — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link active">Poetry</a>
+        </div>
+      </div>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="poetry.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Poetry
+      </a>
+      <div class="post-meta">September 2018</div>
+      <h1>Right?</h1>
+    </div>
+
+    <div class="poem-body">
+
+      <div class="stanza">It was interesting, flying away from it all,
+but new travels, making the world small.
+I'm torn between ignorance as bliss,
+tuning it out, not a tweet or a hiss
+of blue or red, of left or right,
+in this wonderous reality I would get sleep at night!</div>
+
+      <div class="stanza">This thought is but a dream,
+one I realistically would never pursue,
+for turning a cold shoulder
+would be an insult to you.
+You the farmer, you the beggar, you the billionaire.
+Abstaining from my inalienable right is not fair
+to those who have had it stripped, or live oppressed,
+a say in our direction makes us more fortunate than the rest.</div>
+
+      <div class="stanza">A vote is but a drop, but mighty rivers run
+when drops join together and choose as one
+leaders of the ship upon which stars and stripes fly.
+I shall not let our course go awry
+as long as the rudder is within my grasp,
+I will pull with all my might, until my last gasp.</div>
+
+      <div class="stanza">Our wake is too large for us to ignore
+the tsunami effect we have on those ashore.
+Although we may not always get it correct,
+the moment we fail to stop and inspect
+the ones at the wheel of our mighty craft
+is the moment we fate all to a life raft.</div>
+
+      <div class="stanza">So read on the issues, pause, and educate yourself
+or put that ballot slip up on a high shelf.
+A vote cast in ignorance is not a vote cast in bliss
+for because of it, the future we need may be the future we miss.</div>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>

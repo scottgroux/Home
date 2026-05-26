@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expectations — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link active">Poetry</a>
+        </div>
+      </div>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="poetry.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Poetry
+      </a>
+      <div class="post-meta">November 2018</div>
+      <h1>Expectations</h1>
+    </div>
+
+    <div class="poem-body">
+
+      <div class="stanza">I will never be on the 50 yard line of Lambeau Field,
+holding the ball and performing a victory kneel.
+I won't make the next great find in the field of metallurgy,
+even though my education put that knowledge within me.</div>
+
+      <div class="stanza">A piece of mine will never hang in the Louvre
+for watercolors aren't my thing and my brushstrokes aren't smooth.
+Never shall I build a house with my bare hands,
+maybe never own a house if things remain where they stand.</div>
+
+      <div class="stanza">I won't understand the joy of having a great grandchild.
+Settling down is far away, life is fun when it is hectic & wild.
+The surface of the Moon will be untouched by these feet,
+although floating in low gravity would be pretty sweet.</div>
+
+      <div class="stanza">I will never know how life without electricity feels,
+or the inability to get places by a motor and four wheels.
+People will never pay to hear me stand and sing,
+there are others far better at that sort of thing.</div>
+
+      <div class="stanza">All of these feats, I've come to accept,
+I will not accomplish, but not because I am inept.
+I've made conscious choices each passing day
+to do what I love and lead my life in a positive way.</div>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>

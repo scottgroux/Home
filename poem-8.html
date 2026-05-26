@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirror — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link active">Poetry</a>
+        </div>
+      </div>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="poetry.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Poetry
+      </a>
+      <div class="post-meta">November 2018</div>
+      <h1>Mirror</h1>
+    </div>
+
+    <div class="poem-body">
+
+      <div class="stanza">Something about the mountains makes me feel at home,
+and it is more than having crags to conquer and roam.
+The rocky scrambles are irregular, like a young child's scar.
+Pristine white sands of the desert run near and far.</div>
+
+      <div class="stanza">Here is but an entry to the majesty the Fish River Canyon holds,
+yet a place of such grand size can be awfully lonely & cold.
+From my front door lays a peak-filled landscape most profound,
+behind in the full toothy smile and welcome from the community around.</div>
+
+      <div class="stanza">A man sees me running, I stop, and he asks "have all been kind?"
+Travel another 23 years and thousands of miles, I will never find
+the feeling of home I've felt after just seven short days.
+I haven't talked with all, or even many, but love is shown many ways.</div>
+
+      <div class="stanza">Although I have no bathroom mirror, the mountains' reflection matters most.
+Their beauty during twilight reflects the warmth from the town that is my host.
+Outside my flat, one may see little but iron and concrete,
+but with help from the mountains, I see my presidential suite.</div>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footrace — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link">Editorials</a>
+          <a href="poetry.html" class="nav-link active">Poetry</a>
+        </div>
+      </div>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="poetry.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Poetry
+      </a>
+      <div class="post-meta">December 2018</div>
+      <h1>Footrace</h1>
+    </div>
+
+    <div class="poem-body">
+
+      <div class="stanza">I want, to organize a race.</div>
+
+      <div class="stanza">It can be 5k, it can be 3k,
+I want these kids to think it is okay,
+to throw their hands up and say,
+this is a beautiful day,
+and no one else will stand in my way.</div>
+
+      <div class="stanza">I want, to organize a race.</div>
+
+      <div class="stanza">This race shouldn't epitomize,
+the struggle present in some eyes,
+when maths or English isn't the way you compartmentalize,
+these two subjects come to demonize,
+the hours between 7:30 and 13:30 for an otherwise,
+smart and generous kid who tries.</div>
+
+      <div class="stanza">I want, to organize a race.</div>
+
+      <div class="stanza">For the goal is really only one,
+to spend a day out in the sun,
+breathing air and having fun,
+overcoming a challenge while worrying about none,
+but yourself and crossing that finish line to say you are done.</div>
+
+      <div class="stanza">I want, to organize a race.</div>
+
+      <div class="stanza">But what if no one shows to the race,
+or requests are ignored for the route & space,
+or a kid doesn't go because his shoes don't lace,
+even though he probably would have set the pace,
+or none of these reasons are the real case,
+and the truth I would have to face.</div>
+
+      <div class="stanza">I, want to organize a race.</div>
+
+      <div class="stanza">Nobody asked for one.</div>
+
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>
