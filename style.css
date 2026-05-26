@@ -545,7 +545,81 @@ nav { flex: 1; }
 }
  
 .poem-body .stanza:last-child { margin-bottom: 0; }
- 
+
+/* ── Video list page ────────────────────── */
+.video-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+  align-items: center;
+}
+.video-item:first-child { border-top: 1px solid var(--border); }
+.video-item:hover { background: var(--green-ghost); margin: 0 -20px; padding-left: 20px; padding-right: 20px; border-radius: 4px; border-color: transparent; }
+
+.video-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 3px;
+  display: block;
+}
+
+.video-meta {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.video-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.video-desc {
+  font-size: 0.83rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+}
+
+/* ── Individual video page ───────────────── */
+.video-body {
+  padding: 48px 64px 80px;
+  max-width: 860px;
+}
+
+.video-body p {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink-muted);
+  margin-bottom: 32px;
+  max-width: 620px;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
 /* ── Hamburger button (mobile only) ─────── */
 .menu-btn {
   display: none;
@@ -607,7 +681,11 @@ nav { flex: 1; }
 
   .poem-body { padding-left: 16px; padding-right: 16px; overflow-x: auto; }
   .poem-body .stanza { white-space: pre; }
- 
+
+  .video-body { padding-left: 20px; padding-right: 20px; }
+  .video-item { grid-template-columns: 1fr; }
+  .video-item:hover { margin: 0; padding-left: 0; padding-right: 0; background: none; border-color: var(--border); border-radius: 0; }
+
   .home-hero h1 { font-size: 2.2rem; }
   .photo-grid { grid-template-columns: 1fr; }
  
