@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poetry — Your Name</title>
+  <title>Poetry — Scott Groux</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Poetry-specific overrides */
     .poem-item {
       padding: 28px 0;
       border-bottom: 1px solid var(--border);
       display: grid;
       grid-template-columns: 80px 1fr;
       gap: 0 24px;
+      cursor: pointer;
+      transition: background 0.15s;
     }
     .poem-item:first-child { border-top: 1px solid var(--border); }
+    .poem-item:hover { background: var(--green-ghost); margin: 0 -20px; padding-left: 20px; padding-right: 20px; border-radius: 4px; border-color: transparent; }
     .poem-title {
       font-family: var(--font-display);
       font-size: 1.3rem;
@@ -32,10 +34,6 @@
       color: var(--ink-muted);
       white-space: pre-line;
     }
-    .poem-lines em {
-      font-style: italic;
-      color: var(--purple-soft);
-    }
     .poem-tag {
       display: inline-block;
       margin-top: 12px;
@@ -48,23 +46,28 @@
       border-radius: 2px;
       font-family: var(--font-body);
     }
+    @media (max-width: 768px) {
+      .poem-item:hover { margin: 0; padding-left: 0; padding-right: 0; background: none; border-color: var(--border); border-radius: 0; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ── Sidebar ── -->
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <div class="name">Your Name</div>
-      <div class="tagline">Writing &amp; thoughts</div>
-    </div>
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
 
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
     <nav>
       <a href="index.html" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
         Home
       </a>
-
       <div class="nav-section">
         <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
@@ -75,17 +78,14 @@
           <a href="poetry.html" class="nav-link active">Poetry</a>
         </div>
       </div>
-
       <a href="resume.html" class="nav-link">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
         Resume
       </a>
     </nav>
-
-    <div class="sidebar-footer">© 2025 Your Name</div>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
   </aside>
 
-  <!-- ── Main ── -->
   <main class="main">
 
     <section class="writing-hero">
@@ -94,57 +94,65 @@
         Personal Writing
       </div>
       <h1>Poetry</h1>
-      <p>A collection of poems — written over time, in various places, about whatever asked to be noticed.</p>
+      <p>
+        A collection of poems from the first year of my Peace Corps service.
+        I used this poetry to express some of the challenges and successes of
+        settling into my community of Aus.
+        Reading these bring me back to a wonderful period of my life of growth
+        and learning.
+        I hope you enjoy.
+      </p>
     </section>
 
     <div class="writing-list">
 
-      <!-- ── Poem entries — duplicate this block for each poem ── -->
-
-      <article class="poem-item">
-        <div class="post-date">May<br>2025</div>
+      <article class="poem-item" onclick="window.location='poem-1.html'">
+        <div class="post-date">March<br>2019</div>
         <div>
-          <div class="poem-title">Your first poem title</div>
-          <div class="poem-lines">Paste the opening lines of your poem here.
-Line breaks are preserved exactly as written.
-You can show a few lines and link to the full poem,
-or display the whole piece.</div>
-          <span class="poem-tag">Free verse</span>
+          <div class="poem-title">Name</div>
+          <div class="poem-lines">LEAVE ME MY NAME!!
+            -John Proctor
+          </div>
         </div>
       </article>
 
-      <article class="poem-item">
+      <article class="poem-item" onclick="window.location='poem-2.html'">
         <div class="post-date">Mar<br>2025</div>
         <div>
-          <div class="poem-title">Another poem</div>
+          <div class="poem-title">A second poem</div>
           <div class="poem-lines">The second poem begins here.
-Each line sits on its own.
-Spacing and breath are everything.</div>
+Each line sits on its own.</div>
           <span class="poem-tag">Lyric</span>
         </div>
       </article>
 
-      <article class="poem-item">
+      <article class="poem-item" onclick="window.location='poem-3.html'">
         <div class="post-date">Jan<br>2025</div>
         <div>
           <div class="poem-title">A third piece</div>
           <div class="poem-lines">Add more poems by duplicating
-the article block above.
-Tag them however you like — form, mood, season.</div>
+the article block above.</div>
           <span class="poem-tag">Sonnet</span>
         </div>
       </article>
 
     </div>
-
   </main>
 
   <script>
     function toggleWriting() {
-      const toggle = document.getElementById('writing-toggle');
-      const sub    = document.getElementById('writing-sub');
-      toggle.classList.toggle('open');
-      sub.classList.toggle('open');
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
     }
   </script>
 
