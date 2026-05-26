@@ -532,15 +532,16 @@ nav { flex: 1; }
 .poem-body {
   padding: 52px 64px 80px;
   max-width: 560px;
+  overflow-x: auto;
 }
- 
+
 .poem-body .stanza {
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 300;
   line-height: 2.1;
   color: var(--ink);
-  white-space: pre-line;
+  white-space: pre;
   margin-bottom: 2.2rem;
 }
  
