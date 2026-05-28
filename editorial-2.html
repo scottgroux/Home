@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memento Memoriam — Scott Groux</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Open navigation" onclick="toggleSidebar()">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="name">Scott Groux</div>
+      <div class="tagline">Personal Collection</div>
+    </div>
+    <nav>
+      <a href="index.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+        Home
+      </a>
+      <div class="nav-section">
+        <div class="nav-section-label open" id="writing-toggle" onclick="toggleWriting()">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          Personal Writing
+        </div>
+        <div class="nav-sub open" id="writing-sub">
+          <a href="editorials.html" class="nav-link active">Editorials</a>
+          <a href="poetry.html" class="nav-link">Poetry</a>
+        </div>
+      </div>
+      <a href="videos.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Videos
+      </a>
+      <a href="resume.html" class="nav-link">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+        Resume
+      </a>
+    </nav>
+    <div class="sidebar-footer">© 2026 Scott Groux</div>
+  </aside>
+
+  <main class="main">
+
+    <div class="post-hero">
+      <a href="editorials.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M5 12l7 7M5 12l7-7"/></svg>
+        Editorials
+      </a>
+      <div class="post-meta">May 2026 · Essay</div>
+      <h1>Memento Memoriam</h1>
+      <div class="post-subtitle">The beauty and joy of memories is that they are emotional and fickle. 10 minute read</div>
+    </div>
+
+    <div class="post-body">
+      <p>
+        My recent time away from employment has enabled me to return to regular literature reading.
+        This return has opened up a period of self rediscovery, what kind of book do I like? As a child, I
+        would tear through books from classic children's literature of Harry Potter, to more deeply
+        fantasy inclined tomes of Eragon and Lord of the Rings. But now 15 years gone since my last
+        proper completion of a book without academic necessity, what would I find myself partial
+        towards?
+      </p>
+      <p>
+        I decided to ride the unpredictable wave of "what English paperback is available on the hostel
+        bookshelf" instead of preparing myself with an e-reader before departure. I found dry history
+        books, page turning spy novels, netflix series inspiring romance stories, and incredibly abstract
+        tales told by a certain Italian author. How Italo Cavino's books found their way into my hands as
+        many times as they did is beyond me. Regardless, I've rediscovered a love of reading I hope to
+        hold onto more tightly than before.
+      </p>
+      <p>
+        My most recent completion was Kafka on the Shore by Murakami. A fantastical multi plot story
+        that slowly coalesces upon a single timeline, I found myself processing an idea that has been
+        with me for over a decade. To avoid spoilers, the lead character, Kafka, finds himself in an
+        alternate reality/purgatory where he spends every day with and is tended upon by the woman of
+        his dreams. I say "woman of his dreams" in the most literal of ways possible. In addition, none of
+        the people in this space hold memories. If they do hold memories, they fade away quickly for
+        "the library takes care of those". He is implored by the woman to leave immediately, for if he
+        does not, the opportunity to do so will disappear. All the character asks is "I want you to
+        remember me. If you remember me, then I don't care if everybody else forgets."
+      </p>
+      <p>
+        When I was 21 years old, my close friend passed away, Alex Fish. I was in Denmark for a
+        semester of university and he was in Spain doing the same. He lost control of his Type 1
+        diabetes one night and slipped into a coma, slipping away from myself and everyone else who
+        loved him. It hurts to this day. I hold a tattoo of two fish on my ankle, one swimming behind the
+        other. This is my daily reminder that one day, I will follow him into the abyss.
+      </p>
+      <p>
+        The saddest part of Fish's death was not the act itself. I was completely removed from what
+        happened. He passed away on the other side of the continent and I was unable to attend the
+        service back in the United States. I tried to process my anguish and grief and it was incredibly
+        difficult. I went for several runs in the woods that ended in tears. I attended a Kygo concert in
+        Spain with another mutual friend as a memorial of sorts to him. We had originally bought tickets
+        as a group with Fish. Alcohol took over after the show and most of the rest of the night was lost.
+        While unideal at the moment, this experience has served as a reminder of how not to deal with
+        the passing of someone near and dear.
+      </p>
+      <p>
+        The worst part of Fish's passing that still sticks with me today is the knowing that all I have of
+        him is done and complete. The photos, videos, memories I have will not continue to grow, as I
+        thought they would as lifelong friends. As I've continued to process his passing even 10 years
+        on, I've come to realize all we ever have of anyone is memories. Momentos, messages,
+        sentiments, monuments, all of these are physical or intangible reminders of the humans we
+        surround ourselves with. If you remember me, then it doesn't matter if everybody else forgets.
+      </p>
+      <p>
+        Some math: 30% of your life you should be sleeping, 25% of your life you are probably working.
+        During the remainder, you are eating/washing/maintaining yourself or are (hopefully) with
+        family/friends. The numbers indicate that a large portion of the time, you are not with the people
+        you love and care for.
+      </p>
+      <p>
+        Conversely, a majority of the time you exist, you are but a memory to others of a time they spent
+        with you. This isn't stated to cheapen your life and actions, but instead heighten the importance
+        of presence and enjoyment when you are with others. The 1-3 hours you see a friend will
+        represent the sentiment in their mind of yourself for the next 1-3 weeks. Realistically, those
+        numbers are a best case scenario. Haven't seen a friend in multiple months? The importance
+        only grows.
+      </p>
+      <p>
+        We sit at an uncomfortable inflection point as a society, as an animal species, of designing our
+        way out of our fundamental flaw. Memories are fickle and fade over time. Our brains only
+        maintain so many neural pathways, pruning away the ones of no use to keep us as fresh and
+        quick as we can in the topics that matter. Eventually, neuroplasticity decreases and brain
+        function isn't as clean as it once was. Recall slows down, stories from youth become tall tales,
+        we get old.
+      </p>
+      <p>
+        What happens when we let the library take care of memories? Attempts to create great halls of
+        knowledge spanning all of human history are as old as civilization itself. The most impactful
+        knowledge consortium on my life thus far is Wikipedia. I loved Wikipedia as a child. To no
+        surprise, I was very popular at school with plenty of friends, just like any other Wikipedia loving
+        youth. After completing my homework, I would chase down rabbit holes, jumping from article to
+        article, feasting upon the crowd sourced and volunteer monitored record of everything. I
+        attribute some part of my inquisitive nature and curiosity to access to the internet during these
+        formative years.
+      </p>
+      <p>
+        The Internet is a very different tool now that it was 20 years ago. Tech firms with offices across
+        the globe have generated near trillion dollar valuations due to monopolizing your time spent on
+        the Internet. Advertisements based on your search exist plastered on every page, preying on
+        your deepest insecurities. A far cry from Wikipedia and its non-profit operating foundation. The
+        Internet was once heralded on its potential to revolutionize and improve humanity through
+        communication, interconnectivity, and access to information. Now, it is increasingly a tool for the
+        global oligarchs to distract and sow division amongst the general populace.
+      </p>
+      <p>
+        I don't remember the last book I read for fun as a teenager. I do remember what came after that
+        book very clearly. Already a teenager with a flip phone and an iPod nano, I lobbied my parents
+        for an iTouch. After a summer of mowed lawns, I received my first black mirror in 7th grade.
+        Books required keeping a light on, which could alert prying adult eyes to the fact that you
+        weren't asleep. Full color games on a backlit screen? It wasn't even a competition.
+      </p>
+      <p>
+        Since then, the screens have gotten bigger, the flip phone became redundant, and the attraction
+        became more than just Flappy Bird. I became a big fan of social media from the get-go. The
+        premise of sharing photos, thoughts, memes, and cat videos instantly clicked. Away messages
+        on AOL, updating my page theme on MySpace, commenting on Reddit post discussions,
+        sharing angsty music lyrics as statuses on Facebook. To do all of this while in the private
+        seclusion of my bedroom, away from the same prying eyes surrounding the family desktop
+        computer, was a surreal experience during childhood.
+      </p>
+      <p>
+        At the beginning, the tech companies weren't thinking about curation of content via algorithms.
+        They were full of potential, buoyed by investment capital, unbound by expectations of positive
+        cash flows. Around the end of my high school years, Facebook started having advertisements.
+        At the end of college, Instagram was no longer a chronological feed. The beauty and simplicity
+        of social media disappeared. Instead of seeing your friends and family posts from today, you
+        see what They want you to see.
+      </p>
+      <p>
+        Social media feeds became my daily reading, or so I told myself. I supplemented Twitter threads
+        with email newsletters, "long form" opinion pieces, and the news of the day to form a "healthy"
+        written content diet. I didn't read books, because why focus on one topic when you could read
+        small bits of 100 topics? My education forced me to read enough books, the idea of adding
+        more to my plate seemed masochistic and the very last thing I wanted after studying.
+      </p>
+      <p>
+        The same notion held into the beginning of my professional life. You would think Peace Corps
+        volunteer service would have been a nice time to recalculate and reassess, but news and
+        basketball podcasts filled the empty spaces between teaching and playing soccer. Maybe
+        returning home to no job, no daily schedule might open up an afternoon for a quiet story under a
+        tree? It's difficult to make productive decisions when 80% of your day is staring into the void of
+        despair about how to recreate the plan you once had for your 20s. Surely, once settled with a
+        white collar 9-5 job, just a spy novel to liven things up? Reading and writing emails was all I did
+        all day, any added tasks in those categories would have to have a better reason than just
+        because.
+      </p>
+      <p>
+        This approach to long form writing and reading for personal enjoyment hurt me. What I
+        previously believed was a prudent, balanced approach to content intake was heavy on
+        processed and refined media that was designed to spark my engagement. It didn't take days,
+        weeks for me to complete a well written piece and ponder on in-between. There's benefit to be
+        gained from sitting on a bus, ruminating on what has happened in a fiction tale. Even better to
+        guess what will happen next, when the story is not tied to the constraints of reality.
+      </p>
+      <p>
+        There's inherent difficulty in looking at a blank word document and filling it with thoughts. Your
+        ideas and theses are improved when you don't have to press send within 20 minutes. These
+        reading and writing tasks improve our critical thinking, test our written communication, and
+        develop memories in our mind that we call upon later in life. I have spent so much time away
+        from it that I will sadly never get back. At the same time, coming back now is better than never,
+        and it feels like returning to a sport after years of inactivity. The movement isn't natural and I've
+        lost a step from where I once was. But with each step, it gets a little easier.
+      </p>
+      <p>
+        Now, the Library of Everything has been greatly improved. Gone are the Wikipedia days of
+        struggling to find the correct page for your question at hand, then interpreting the jargonese into
+        plain speech. 24 hours a day, there's a desk worker there to help you find exactly what you
+        need. There's a mathematician and statician, present to churn out any statistic necessary for
+        your argument. There's an expert in every field of research ever, possessing the most patient of
+        attitudes, willing to explain in as many ways necessary for you to understand the concept at
+        hand. Every book, every photo, every note, every comment on the Internet has been
+        incorporated into the greatest library mankind has ever seen. All thanks to the same people who
+        ruined the Internet.
+      </p>
+      <p>
+        The question becomes why sit and struggle through a book? The library has every book and
+        they are all summarized neatly, with someone waiting to explain it to you. Why struggle through
+        writing an email? The library can help you write far more quickly and has amazing grammar.
+        Why work on writing all your ideas out? Your ideas are probably very similar to someone else's
+        from before and, especially considering the library already knows your writing tone from
+        scraping all the content you've put on the Internet from your adult life, we could do a pretty bang
+        up job on your 2000 word piece in 30 seconds or so. Worst case, it will be a wonderful rough
+        draft that you can make edits to and claim all the credit. Isn't the library magical?
+      </p>
+      <p>
+        Artificial Intelligence and Large Language Models exist and pretending they have no positive
+        value to society isn't productive for anyone. They have their use cases and will be another tool
+        to increase productivity, similar to the computer. Caution should stem from their potential to
+        negatively affect our ability to read, write, think, and remember. Never before has something
+        existed that could make the need to recall ideas or become knowledgeable in a topic redundant.
+        Critical thinking skills decay if neglected and huge divisions within society would manifest if
+        vulnerable people are not protected and sheltered from A.I.'s impacts.
+      </p>
+      <p>
+        Additionally, there should be extreme mistrust of the people who have developed these tools
+        and their reasons for doing so. The developers behind all of the major LLM's have the same
+        incentives as the social media giants of the past 15 years. They are looking to make money and
+        there will soon be very real and present impetuses for these technologies to make money and
+        provide shareholder value. Social media has created divisions in society via echo chambers,
+        allowed the spread of misinformation, and fomented violent ideas that have manifested into
+        genocide. We gave the social media companies the opportunity to police themselves and they
+        failed miserably. We cannot make the same mistake again.
+      </p>
+      <p>
+        The opportunity to responsibly adopt is here and now. Humanity should defend the sanctity of its
+        collective memories with vigor. We have achieved one of the great technological feats that has
+        escaped us for centuries and there is real power in said technology. The resulting power from
+        this tool cannot be concentrated in the hands of few.
+      </p>
+      <p>
+        We cannot lose sight of the fact that remembering is what creates joy, astonishment, sadness,
+        anger, and love. Remembering the dearest people in our lives and how they make us feel when
+        we are with them is how they stay alive within us. To be human is to remember. If we instead
+        choose to let the library take care of our memories, we might not remember the path to go back.
+      </p>
+    </div>
+
+  </main>
+
+  <script>
+    function toggleWriting() {
+      document.getElementById('writing-toggle').classList.toggle('open');
+      document.getElementById('writing-sub').classList.toggle('open');
+    }
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('menu-btn').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('visible');
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('menu-btn').classList.remove('open');
+      document.getElementById('overlay').classList.remove('visible');
+    }
+  </script>
+
+</body>
+</html>
